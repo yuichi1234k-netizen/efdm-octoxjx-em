@@ -1,0 +1,179 @@
+{
+  "plugin": {
+    "totalDownloads": 64,
+    "stargazers": 2,
+    "createdAt": "2026-03-27T14:43:45Z",
+    "latestReleaseAt": "2026-03-27T16:03:16Z",
+    "lastCommitDate": "2026-04-27T08:06:50Z",
+    "commitCountInLast24Months": 7,
+    "totalReleases": 40,
+    "releases": [
+      {
+        "publishedAt": "2026-03-27T15:09:57Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-03-27T16:03:16Z",
+        "downloads": 10
+      },
+      {
+        "publishedAt": "2026-04-11T06:26:35Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-13T23:37:48Z",
+        "downloads": 4
+      },
+      {
+        "publishedAt": "2026-04-14T02:09:30Z",
+        "downloads": 3
+      },
+      {
+        "publishedAt": "2026-04-14T10:40:07Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-14T11:15:20Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-17T00:13:46Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-17T01:29:48Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-17T13:10:58Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-19T08:57:27Z",
+        "downloads": 0
+      },
+      {
+        "publishedAt": "2026-04-19T09:19:50Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-19T09:29:46Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-19T11:23:05Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-19T11:40:41Z",
+        "downloads": 0
+      },
+      {
+        "publishedAt": "2026-04-19T11:44:40Z",
+        "downloads": 0
+      },
+      {
+        "publishedAt": "2026-04-19T11:56:14Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-19T13:31:58Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-19T14:12:52Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-20T10:41:23Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-20T11:01:58Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-20T11:32:57Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-20T12:18:13Z",
+        "downloads": 3
+      },
+      {
+        "publishedAt": "2026-04-22T04:26:46Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-22T06:31:20Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-22T06:37:21Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-22T07:10:36Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-22T07:28:00Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-22T08:00:25Z",
+        "downloads": 0
+      },
+      {
+        "publishedAt": "2026-04-22T08:21:13Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-22T11:55:00Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-22T12:58:07Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-22T23:17:03Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-23T00:34:44Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-23T05:42:23Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-23T08:14:53Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-23T23:45:39Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-23T23:56:09Z",
+        "downloads": 2
+      },
+      {
+        "publishedAt": "2026-04-24T02:07:32Z",
+        "downloads": 1
+      },
+      {
+        "publishedAt": "2026-04-27T08:07:10Z",
+        "downloads": 2
+      }
+    ],
+    "openIssues": [],
+    "closedIssues": [],
+    "openPRs": [],
+    "closedPRs": [],
+    "mergedPRs": []
+  },
+  "now": "2026-04-30T01:29:16.404Z"
+}
