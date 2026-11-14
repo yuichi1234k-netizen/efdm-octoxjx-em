@@ -1,0 +1,80 @@
+name: Plugin Data Pipeline
+
+on:
+  schedule:
+    - cron: '50 23 * * *'
+  push:
+    paths:
+      - 'manifest.json'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Validation Script
+        run: npm run validate
+
+  process-data:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+
+      - name: Install Node Dependencies
+        run: npm install 
+
+      # Cache removed to ensure a clean slate and fresh data fetching as requested.
+      # The runner now handles directory cleaning internally.
+
+      # 1. Runner (Fetcher)
+      - name: Run Fetcher
+        env:
+          PAT_1: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run runner
+
+      # 2. Commit Data
+      # Uses orphan branch strategy to wipe history and prevent bloat.
+      # Since the runner wipes the beta/ directory before fetching, git add . 
+      # will only include currently discovered plugins.
+      - name: Commit Data (Snapshot)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Create orphan branch to discard history
+          git checkout --orphan latest_state
+          
+          # Add all files (data, source, config) to the new root commit
+          git add .
+          
+          # Commit as a snapshot
+          git commit -m "chore(data): update plugin statistics [skip ci]"
+          
+          # Force push to overwrite the target branch with this single commit
+          git push origin latest_state:${{ github.ref_name }} --force
